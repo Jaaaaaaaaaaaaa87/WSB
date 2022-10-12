@@ -11,7 +11,10 @@
      $sql = "SELECT * FROM `users`;";
      $result = $conn->query($sql);
      while($user = $result->fetch_assoc()){
-       echo $user['name'];
+       echo <<< E
+       Imię i Nazwisko: $user[name] $user[surname]
+       <hr>
+       E;
      }
      ?>
   </body>
