@@ -11,7 +11,7 @@
      $sql = "SELECT * FROM `users`;";
      $result = $conn->query($sql);
      while($user = $result->fetch_assoc()){
-       
+       echo $user['name'];
      }
      ?>
   </body>
