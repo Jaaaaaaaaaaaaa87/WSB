@@ -10,9 +10,13 @@
      require_once('./scripts/1_connect.php');
      $sql = "SELECT * FROM `users`;";
      $result = $conn->query($sql);
+     $count = 0;
      while($user = $result->fetch_assoc()){
+       $count++;
        echo <<< E
-       Imię i Nazwisko: $user[name] $user[surname]
+       Użytkownik $count:<br>
+       Imię i Nazwisko: $user[name] $user[surname]<br>
+       Data utworzenia: $user[created_at]
        <hr>
        E;
      }
